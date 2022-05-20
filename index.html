@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assegnato (Post-Gazette)</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="icon" href="images/logo.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            //Script for Classifieds sublist
+            window.onload = function() {
+                let classifieds  = document.getElementById("classifieds");
+                classifieds.addEventListener("mouseover", function(){
+                    document.getElementById("sublist").setAttribute("style","display: block");
+                    document.getElementById("nav-row-right").setAttribute("style","display: none");
+                });
+
+                let sublist  = document.getElementById("sublist");
+                sublist.addEventListener("mouseout", function(){
+                    document.getElementById("sublist").setAttribute("style","display: none");
+                    document.getElementById("nav-row-right").setAttribute("style","display: block");
+                });
+
+                classifieds.addEventListener("mouseout", function() {
+                    document.getElementById("sublist").setAttribute("style","display: none");
+                    document.getElementById("nav-row-right").setAttribute("style","display: block");
+                })
+
+                //Script for nav menu
+                let menu = document.getElementById("nav-menu");
+                let section = document.getElementById("section");
+                let sideMenu =  document.getElementById("side-menu");
+                menu.addEventListener("click", function(){
+                    if(section.getAttribute("style")==="margin-left:250px") {
+                        section.setAttribute("style","margin-left:0px")
+                        sideMenu.setAttribute("style","display:none")
+                    }else {
+                        section.setAttribute("style","margin-left:250px")
+                        sideMenu.setAttribute("style","display:block")
+                    }
+                });
+            }
+        </script>
+
+        <header class="header">
+            <div class="header-row">
+                <div class="header-row-left">
+                    <span>Thursday, May 12, 2022, 8:48AM |   60°</span>
+                </div>
+                <div class="header-row-middle">
+                    <a class="header-row-middle-logo" href="#"></a>
+                </div>
+                <div id="header-row-right" class="header-row-right">
+                    <ul class="header-row-right-list">
+                        <li><a href="#">Obituaries</a></li>
+                        <li><a href="#">PGe</a></li>
+                        <li><a href="#">PG Store</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li id="classifieds"><a href="#">Classifieds <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span></a>
+                            <ul id="sublist" class="sublist">
+                                <li><a href="#">Classified</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Legal Notices</a></li>
+                                <li><a href="#">Pets</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="nav-row">
+                <div class="nav-row-inside">
+                    <div class="nav-row-left">
+                        <div id="nav-menu" class="nav-row-left-menu">
+                            <span class="nav-row-left-menu-icon"> <i class="fa fa-bars" aria-hidden="true"></i></span>
+                            <span class="nav-row-left-menu-text">MENU</span>
+                        </div>
+                        <div class="nav-row-left-list">
+                            <ul>
+                                <li><a href="#"><span>SUBSCRIBE</span></a></li>
+                                <li><a href="#"><span>LOGIN</span></a></li>
+                                <li><a href="#"><span>REGISTER</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-row-middle">
+                        <span class="nav-row-middle-icon"><a href="#"></a></span>
+                        <ul class="nav-row-middle-list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Local</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Opinion</a></li>
+                            <li><a href="#">A&E</a></li>
+                            <li><a href="#">Life</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div id="nav-row-right" class="nav-row-right">
+                        <div class="nav-row-right-socials">
+                            <a href="#"><span><i class="fa fa-facebook-square" aria-hidden="true"></i></span></a>
+                            <a href="#" class="socials-twitter"><span></span><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" class="socials-ig"><span></span><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="nav-row-right-search">
+                            <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="nav-row-right-newsletter">
+                            <a href="#">NEWSLETTER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="side-menu">
+            <div class="side-menu-border"></div>
+            <div class="side-menu-header">ACCOUNT</div>
+            <ul class="side-menu-account">
+                <li><a>
+                    <span class="side-menu-account-icon"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                    <span>Subscribe</span>
+                </a></li>
+                <li><a>
+                    <span class="side-menu-account-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <span>Login</span>
+                </a></li>
+                <li><a>
+                    <span class="side-menu-account-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span>Register</span>
+                </a></li>
+                <li><a>
+                    <span class="side-menu-account-icon"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                    <span>Subscriber Services</span>
+                </a></li>
+                <li><a>
+                    <span class="side-menu-account-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <span>Search</span>
+                </a></li>
+            </ul>
+            <div class="side-menu-header">SECTIONS</div>
+            <ul class="side-menu-section">
+                <li><a id="home">
+                    HOME
+                    <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                </a></li>
+                <li><a id="news">
+                    NEWS
+                    <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                </a></li>
+                <li><a id="local">
+                    LOCAL
+                    <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                </a></li>
+                <li><a id="sports">
+                    SPORTS
+                    <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                </a></li>
+            </ul>
+        </div>
+
+        <section id="section">
+            <div class="advertisement">
+                <p>ADVERTISEMENT</p>
+                <img src="images/advertisement-placeholder.png" style="display: block;">
+            </div>
+            <div class="page">
+                <div>
+                    <div class="aside-and-main">
+                        <aside class="aside-info">
+                            <h3 class="aside-info-title">THIS JUST IN</h3>
+                            <a class="aside-info-content" href="#">
+                                <div class="aside-info-img">
+                                    <img src="images/171x171.png">
+                                </div>
+                                <div class="aside-info-text">
+                                    <span>Penguins blow another multi-goal lead, Rangers force Game 7</span>
+                                    <span class="aside-info-text-hour">4h</span>
+                                </div>
+                            </a>
+                            <a class="aside-info-content" href="#">
+                                <div class="aside-info-img">
+                                    <img src="images/171x171.png">
+                                </div>
+                                <div class="aside-info-text">
+                                    <span>Raucous evening turns sour as Penguins blow another lead to Rangers</span>
+                                    <span class="aside-info-text-hour">5h</span>
+                                </div>
+                            </a>
+                            <a class="aside-info-content" href="#">
+                                <div class="aside-info-img">
+                                    <img src="images/171x171.png">
+                                </div>
+                                <div class="aside-info-text">
+                                    <span>Bethel Park officer hit by vehicle; second time this month</span>
+                                    <span class="aside-info-text-hour">5h</span>
+                                </div>
+                            </a>
+                            <a class="aside-info-content" href="#">
+                                <div class="aside-info-img">
+                                    <img src="images/171x171.png">
+                                </div>
+                                <div class="aside-info-text">
+                                    <span>Man dead after crash in Moon Township</span>
+                                    <span class="aside-info-text-hour">6h</span>
+                                </div>
+                            </a>
+                            <a class="aside-info-content" href="#">
+                                <div class="aside-info-img">
+                                    <img src="images/171x171.png">
+                                </div>
+                                <div class="aside-info-text">
+                                    <span>Paul Zeise: The series isn't finished — but it sure feels like the Penguins are done</span>
+                                    <span class="aside-info-text-hour">5h</span>
+                                </div>
+                            </a>
+                            <a class="aside-info-content" href="#">
+                                <div class="aside-info-img">
+                                    <img src="images/171x171.png">
+                                </div>
+                                <div class="aside-info-text">
+                                    <span>House subpoenas its own in a grave new norm after Jan. 6 attack</span>
+                                    <span class="aside-info-text-hour">17h</span>
+                                </div>
+                            </a>
+        
+                            <div class="aside-button">
+                                <a href="#">MORE<span><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span></a>
+                            </div>
+                        </aside>
+    
+                        <div class="main">
+                            <div class="main-row-one">
+                                <a href="#">
+                                    <img src="images/455x340.png">
+                                    <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                </a>
+                            </div>
+                            <div class="main-row-two">
+                                <a href="#">
+                                    <img src="images/225x169.png">
+                                    <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                </a>
+                                <a href="#">
+                                    <img src="images/225x169.png">
+                                    <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                </a>
+                            </div>
+                            <div class="main-row-three">
+                                <a href="#">
+                                    <img src="images/148x148.png">
+                                    <p>Doug Mastriano's campaign for governor gets late boost from Donald Trump </p>
+                                </a>
+                                <a href="#">
+                                    <img src="images/148x148.png">
+                                    <p>Raucous evening turns sour as Penguins blow another lead to Ranger</p>
+                                </a>
+                                <a href="#">
+                                    <img src="images/148x148.png">
+                                    <p>Paul Zeise: The series isn't finished — but it sure feels like the Penguins are done </p>
+                                </a>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="must-read-row">
+                        <div class="must-read-row-title"><span>MUST READ</span></div>
+                        <div class="must-read-row-content">
+                            <a href="#">
+                                <img src="images/171x171.png">
+                                <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                            </a>
+                            <a href="#">
+                                <img src="images/171x171.png">
+                                <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                            </a>
+                            <a href="#">
+                                <img src="images/171x171.png">
+                                <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="advertisement">
+                        <p>ADVERTISEMENT</p>
+                        <img src="images/advertisement-placeholder.png" style="display: block;">
+                    </div>
+
+                    <div class="trending-row">
+                        <div class="trending-row-title"><span><i class="fa fa-fire" aria-hidden="true"></i></span><span>TRENDING</span></div>
+                        <div class="trending-row-content">
+                            <a href="#">
+                                <img src="images/225x169.png">
+                                <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                <p style="font-size: 1rem;">Sat, May 14, 2022</p>
+                            </a>
+                            <a href="#">
+                                <img src="images/225x169.png">
+                                <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                <p style="font-size: 1rem;">Sat, May 14, 2022</p>
+                            </a>
+                            <a href="#">
+                                <img src="images/225x169.png">
+                                <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                <p style="font-size: 1rem;">Sat, May 14, 2022</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="business-row">
+                        <div class="business-row-title"><span>BUSINESS</span></div>
+                        <div class="business-row-content">
+                            <div class="business-row-left">
+                                <a href="#">
+                                    <img src="images/300x250.png">
+                                    <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                </a>
+                                <a href="#">
+                                    <img src="images/300x250.png">
+                                    <p>20 injured in downtown Milwaukee shootings after Bucks playoff game</p>
+                                </a>
+                            </div>
+                            <div class="business-row-right">
+                                <a href="#">
+                                    <img src="images/60x60.png">
+                                    <span>20 injured in downtown Milwaukee shootings after Bucks playoff game</span>
+                                </a>
+                                <a href="#">
+                                    <img src="images/60x60.png">
+                                    <span>20 injured in downtown Milwaukee shootings after Bucks playoff game</span>
+                                </a>
+                                <a href="#">
+                                    <img src="images/60x60.png">
+                                    <span>20 injured in downtown Milwaukee shootings after Bucks playoff game</span>
+                                </a>
+                                <a href="#">
+                                    <img src="images/60x60.png">
+                                    <span>20 injured in downtown Milwaukee shootings after Bucks playoff game</span>
+                                </a>
+                                <a href="#">
+                                    <img src="images/60x60.png">
+                                    <span>20 injured in downtown Milwaukee shootings after Bucks playoff game</span>
+                                </a>
+                                <div class="business-button">
+                                    <a href="#">MORE<span><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="aside-sponsor">
+                    <div class="advertisement">
+                        <p>ADVERTISEMENT</p>
+                        <img src="images/300x250.png" style="display: block;">
+                    </div>
+                    <div class="border"></div>
+                    <div>
+                        <img src="images/Pittsburgh-aerial.jpg" style="width:90%;margin-left: 5%;">
+                        <h3 style="text-align: center">PG SPECIAL REPORTS</h3>
+                        <p>■ Legacy of resilience: The Gainey family has a long history of firsts in Pittsburgh</p>
+                            <p>■ A triumphant, tangled legacy: Ed Gainey's Virginia and Pittsburgh roots run deep</p>
+                            <p>■ Pennsylvania blocks critical details of state's most decrepit bridges</p>
+                            <p>■ The Pirates’ PNC Park lease was set up to benefit the public, too. It has rarely paid off.</p>
+                            <p>■ Records show the Pirates’ payroll is often covered by ticket and food sales.</p>
+                            <p>■ Putin oligarchs stashed billions in U.S. banks, secret records show</p>
+                            <p>■ Pittsburgh-area bridges left in chronic disrepair as funding system leaves some of the worst spans behind</p>
+                            <p>■ Hours and hours of collaboration: Fern Hollow Bridge collapse</p>
+                            <p>■ ‘It will overwhelm us’: A year after vaccines arrived, surge of COVID cases triggers more of the tough phone calls</p>
+                            <p>■ With shadowy money, Ukraine oligarch became Cleveland’s biggest landlord</p>
+                            <p>■ Most Pa. police departments don’t tell FBI about shootings</p>
+                            <p>■ How to build a highway: The Post-Gazette spent the last two years looking at the enormous effort went into building the Southern Beltway</p>
+                            <p>■ Housing Misery: Pittsburgh’s public housing plagued by crumbling buildings, failed inspections</p>
+                            <p>■ Brutal Secrets: Police press for final confessions from Pennsylvania's dreaded serial killer</p>
+                    </div>
+                    <div class="border"></div>
+                    <div class="advertisement">
+                        <p>ADVERTISEMENT</p>
+                        <img src="images/300x250.png" style="display: block;">
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </body>
+</html>
