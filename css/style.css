@@ -15,6 +15,12 @@ a {
 
 /*Header style*/
 
+.header {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
 .header-row {
     position: relative;
     height: 70px;
@@ -349,8 +355,17 @@ a {
     background-color: #222;
     color: white;
     width: 250px;
-    position: absolute;
+    position: fixed;
     display: none;
+    top: 124px;
+    z-index: 2;
+    min-height: 85%;
+    max-height: 85%;
+    overflow-y: scroll;
+}
+
+#side-menu::-webkit-scrollbar {
+    width: 0 !important;
 }
 
 .side-menu-border {
@@ -444,6 +459,14 @@ a {
     background-color: #d48e45;
 }
 
+#opinion::before {
+    background-color: rgb(234, 78, 78);
+}
+
+#life::before {
+    background-color: rgb(164, 82, 206);
+}
+
 .side-menu-section span {
     display: inline-block;
     text-align: right;
@@ -525,7 +548,6 @@ a {
 
 .aside-info-img img {
     width: 100%;
-    padding-bottom: 75%;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -549,6 +571,10 @@ a {
 
 .aside-button a span {
     margin-left: 5%;
+}
+
+#section {
+    overflow-x: hidden;
 }
 
 .main {
@@ -611,7 +637,7 @@ a {
 }
 
 .aside-sponsor {
-    margin-left: 3%;
+    margin-left: 9%;
 }
 
 .border {
@@ -901,6 +927,10 @@ a {
         margin-right: 5%;
     }
 
+    #side-menu {
+        min-height: 80%;
+        max-height: 80%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -972,8 +1002,9 @@ a {
     }
 
     .aside-info a.aside-info-content {
-        height: 190px;
+        height: 310px;
         /*background-color: white*/
+        margin-bottom: -20%;
     }
 
     .aside-info-text span {
@@ -1138,5 +1169,12 @@ a {
 
     .main-row-one a p {
         position: static;
+    }
+
+    #side-menu {
+        position: fixed;
+        top: 54px;
+        min-height: 90%;
+        max-height: 90%;
     }
 }
