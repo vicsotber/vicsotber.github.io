@@ -17,6 +17,7 @@ a {
 
 .header {
     position: sticky;
+    position: -webkit-sticky;
     top: 0px;
     z-index: 2;
 }
@@ -821,7 +822,7 @@ a {
 /*Media queries*/
 
 @media screen and (min-width: 767px) and (max-width: 995px) {
-    .nav-row-middle {
+    .nav-row-middle-list {
         display: none;
     }
 

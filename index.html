@@ -5,62 +5,11 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="images/logo.jpg">
+        <script src="js/script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
-        <script type="text/javascript">
-            //Script for Classifieds sublist
-            window.onload = function() {
-                let classifieds  = document.getElementById("classifieds");
-                classifieds.addEventListener("mouseover", function(){
-                    document.getElementById("sublist").setAttribute("style","display: block");
-                    document.getElementById("nav-row-right").setAttribute("style","display: none");
-                });
-
-                let sublist  = document.getElementById("sublist");
-                sublist.addEventListener("mouseout", function(){
-                    document.getElementById("sublist").setAttribute("style","display: none");
-                    document.getElementById("nav-row-right").setAttribute("style","display: block");
-                });
-
-                classifieds.addEventListener("mouseout", function() {
-                    document.getElementById("sublist").setAttribute("style","display: none");
-                    document.getElementById("nav-row-right").setAttribute("style","display: block");
-                })
-
-                //Script for nav menu
-                let menu = document.getElementById("nav-menu");
-                let section = document.getElementById("section");
-                let sideMenu =  document.getElementById("side-menu");
-                menu.addEventListener("click", function(){
-                    if(section.getAttribute("style")==="margin-left:250px") {
-                        //150px
-                        section.setAttribute("style","margin-left:0px")
-                        sideMenu.setAttribute("style","display:none")
-                    }else {
-                        section.setAttribute("style","margin-left:250px")
-                        //150px
-                        sideMenu.setAttribute("style","display:block")
-                    }
-                });
-
-                // let lastScroll = window.scrollY;
-                // window.addEventListener('scroll',function(){
-                //     let currentScroll = window.scrollY;
-                //     if(currentScroll>=110) {
-                //         console.log(currentScroll)
-                //         document.getElementById('nav-row-middle-icon').setAttribute('style','display:inline-block;position:unset')
-                //         document.getElementById('header-row').setAttribute('style','display:none')
-                //     }else{
-                //         document.getElementById('nav-row-middle-icon').setAttribute('style','display:none;position:relative')
-                //         document.getElementById('header-row').setAttribute('style','display:block')
-                //     }
-                //     //lastScroll = currentScroll <= 0 ? 0 : currentScroll
-                // })
-            }
-        </script>
-
         <header class="header">
             <div id="header-row" class="header-row">
                 <div class="header-row-left">
@@ -104,7 +53,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="nav-row-middle">
+                    <div id="nav-row-middle" class="nav-row-middle">
                         <span id="nav-row-middle-icon" class="nav-row-middle-icon"><a href="#"></a></span>
                         <ul class="nav-row-middle-list">
                             <li><a href="#">Home</a></li>
